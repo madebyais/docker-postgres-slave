@@ -14,8 +14,8 @@ Once you've done with the master, you can docker pull this image and run:
 
 ```
 docker run -p 5001:5432 --rm \
-		-v /Users/ais/Workspace/Engineering/docker/psql-experiment/slave/data:/var/lib/postgresql/data \
-		-v /Users/ais/Workspace/Engineering/docker/psql-experiment/slave/tablespace:/var/lib/postgresql/tablespace \
+		-v /docker/psql/slave/data:/var/lib/postgresql/data \
+		-v /docker/psql/slave/tablespace:/var/lib/postgresql/tablespace \
 		-e "PG_MASTER_HOST=postgres-master" \
 		-e "PG_MASTER_PORT=5432" \
 		-e "PG_REPL_USERNAME=repluser" \
